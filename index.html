@@ -32,7 +32,8 @@
             
             import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { VRButton } from 'three/addons/webxr/VRButton.js';
+// import { VRButton } from 'three/addons/webxr/VRButton.js';
+import { ARButton } from 'three/addons/webxr/ARButton.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 105, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -92,7 +93,8 @@ scene.add(helper);
 
 
 // vr 
-document.body.appendChild( VRButton.createButton( renderer ) );
+// document.body.appendChild( VRButton.createButton( renderer ) );
+document.body.appendChild( ARButton.createButton( renderer ) );
 renderer.xr.enabled = true;
 renderer.setAnimationLoop( function () {
 
@@ -100,7 +102,7 @@ renderer.setAnimationLoop( function () {
 
 } );
             </script>
-		<script type="module" src="/mainNotLocal.js"></script>
+		<!-- <script type="module" src="/mainNotLocal.js"></script> -->
         <!-- <script src="https://launchar.app/sdk/v1?key=lsbpA47DLqQ6BPxlVynlBIoHLlpHVolG&redirect=true"></script> -->
         <div id="info">Описание</div>
 	</body>
